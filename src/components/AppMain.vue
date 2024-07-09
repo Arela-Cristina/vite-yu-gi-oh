@@ -2,16 +2,33 @@
 import AppCards from './AppCards.vue'
 
 export default {
-    name: "AppMain",
+    name: 'AppMain',
     components: {
-        AppCards, // componente figlio
+        AppCards
     }
 }
 
 </script>
 
 <template>
-    <h1>Sono il Main</h1>
+    <div>
+        <div class="boxCards">
+            <AppCards />
+            <!-- <AppCards />
+            <AppCards />
+            <AppCards />
+            <AppCards />
+            <AppCards />
+            <AppCards /> -->
+        </div>
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.boxCards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+</style>
