@@ -4,7 +4,7 @@ import AppMain from './components/AppMain.vue'
 import AppCards from './components/AppCards.vue'
 
 // importiamo il nostro store
-import { store } from './store.js';
+import { store } from './store';
 
 export default {
   components: {
