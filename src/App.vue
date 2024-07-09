@@ -1,4 +1,8 @@
 <script>
+//importiamo axios
+import axios from 'axios';
+
+//importiamo i componenti
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppCards from './components/AppCards.vue'
