@@ -26,8 +26,8 @@ export default {
       axios.
         get(store.apiURl)
         .then(result => {
-          console.log(result.data.data[0].name);
-          store.AppCards = result.data.data;
+          console.log(result.data.data[0]);
+          store.AppMain = result.data.data;
         })
         // .catch(err => {
         //   console.log(err);
@@ -43,7 +43,6 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
-  <AppCards />
 </template>
 <!-- hemos quitado scope para importar todos nuestros files -->
 <style  lang="scss"></style>
