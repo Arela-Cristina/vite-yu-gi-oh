@@ -21,6 +21,22 @@ export default {
       store,
     }
   },
+  methods: {
+    getCards() {
+      axios.
+        get(store.apiURl)
+        .then(result => {
+          console.log(result.data.data[0].name);
+          store.AppCards = result.data.data;
+        })
+        // .catch(err => {
+        //   console.log(err);
+        // })
+    }
+  },
+  created() {
+    this.getCards();
+  }
 }
 </script>
 
