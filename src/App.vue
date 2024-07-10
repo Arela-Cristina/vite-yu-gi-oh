@@ -28,16 +28,25 @@ export default {
       axios.
         get(store.apiURl)
         .then(result => {
-          console.log(result.data.data[0]);
+          // console.log(result.data.data[0]);
           store.AppMain = result.data.data;
         })
+    },
+    getArchetypes() {
+      axios.
+        get(store.apiSelect)
+        .then(result => {
+          console.log(result.data)
+           
+        })
         // .catch(err => {
-        //   console.log(err);
-        // })
+        //       console.log(err);
+        //     })
     }
   },
   created() {
     this.getCards();
+    this.getArchetypes();
   }
 }
 </script>
