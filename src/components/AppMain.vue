@@ -1,5 +1,6 @@
 <script>
 import AppCards from './AppCards.vue'
+import Select from './Select.vue'
 
 // import store
 import { store } from '../store'; //sportiamo store
@@ -7,7 +8,8 @@ import { store } from '../store'; //sportiamo store
 export default {
     name: 'AppMain',
     components: {
-        AppCards
+        AppCards,
+        Select
     },
     data() { // esportiamo anche qui la data di store per penderci gli elemti che ci interessano
         return {
@@ -20,13 +22,8 @@ export default {
 
 <template>
     <section>
-        <!-- bottone -->
-        <select id="options"><!--onchange="mostrarOpcionSeleccionada()"-->
-            <option value="option1"></option>
-            <option value="option2">Noble Knight</option>
-            <option value="option3">Alien</option>
-        </select>
-
+        <Select/>
+       <!-- carte trovate -->
         <div class="cardsFound">Found tot cards</div>
         <!-- boxCards -->
         <div class="boxCards">
@@ -41,14 +38,8 @@ section {
     padding: 3rem 3rem;
 }
 
-select {
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    border: none;
-}
-
 .cardsFound {
-    color:white;
+    color: white;
     background-color: rgb(34, 34, 34);
     margin-left: 3rem;
     margin-right: 3rem;

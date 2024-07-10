@@ -6,6 +6,7 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppCards from './components/AppCards.vue'
+import Select from './components/Select.vue'
 
 // importiamo il nostro store
 import { store } from './store';
@@ -14,7 +15,8 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    AppCards
+    AppCards,
+    Select
   },
   data() { // li diciamo di farci tornare la struttura dati
     return {
