@@ -6,7 +6,7 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppCards from './components/AppCards.vue'
-import Select from './components/Select.vue'
+import AppSelect from './components/AppSelect.vue'
 
 // importiamo il nostro store
 import { store } from './store';
@@ -16,7 +16,7 @@ export default {
     AppHeader,
     AppMain,
     AppCards,
-    Select
+    AppSelect
   },
   data() { // li diciamo di farci tornare la struttura dati
     return {
@@ -36,12 +36,13 @@ export default {
       axios.
         get(store.apiSelect)
         .then(result => {
-          console.log(result.data)
-           
+          // console.log(result.data);
+          store.Select = result.data;
+
         })
-        // .catch(err => {
-        //       console.log(err);
-        //     })
+      // .catch(err => {
+      //       console.log(err);
+      //     })
     }
   },
   created() {

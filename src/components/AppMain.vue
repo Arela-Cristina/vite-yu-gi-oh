@@ -1,6 +1,6 @@
 <script>
 import AppCards from './AppCards.vue'
-import Select from './Select.vue'
+import AppSelect from './AppSelect.vue'
 
 // import store
 import { store } from '../store'; //sportiamo store
@@ -9,20 +9,20 @@ export default {
     name: 'AppMain',
     components: {
         AppCards,
-        Select
+        AppSelect
     },
     data() { // esportiamo anche qui la data di store per penderci gli elemti che ci interessano
         return {
             store,
         }
-    },
+    }
 }
 
 </script>
 
 <template>
     <section>
-        <Select/>
+        <AppSelect  :archetypes="store.Select"/>
        <!-- carte trovate -->
         <div class="cardsFound">Found tot cards</div>
         <!-- boxCards -->
