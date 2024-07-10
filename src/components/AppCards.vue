@@ -8,9 +8,9 @@ export default {
 
 <template>
     <div class="card">
-        <img  :src="info.card_images[0].image_url" :alt="info.desc">
-        <div>{{info.name}}</div>
-        <div>{{info.archetype}}</div>
+        <img :src="info.card_images[0].image_url" :alt="info.desc">
+        <div>{{ info.name }}</div>
+        <div>{{ info.archetype }}</div>
     </div>
 </template>
 

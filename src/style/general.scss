@@ -2,3 +2,8 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 //cuici vanno gli stili generaly 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
